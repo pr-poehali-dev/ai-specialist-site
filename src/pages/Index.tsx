@@ -12,14 +12,45 @@ export default function Index() {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Свяжусь с вами в ближайшее время.",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/cef54f5a-a22c-45de-bebc-d2bc73067f0b', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Свяжусь с вами в ближайшее время.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Ошибка",
+          description: data.error || "Не удалось отправить заявку. Попробуйте позже.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Не удалось отправить заявку. Проверьте подключение к интернету.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -315,9 +346,19 @@ export default function Index() {
                 type="submit" 
                 size="lg" 
                 className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+                disabled={isSubmitting}
               >
-                <Icon name="Send" size={20} className="mr-2" />
-                Отправить запрос
+                {isSubmitting ? (
+                  <>
+                    <Icon name="Loader2" size={20} className="mr-2 animate-spin" />
+                    Отправка...
+                  </>
+                ) : (
+                  <>
+                    <Icon name="Send" size={20} className="mr-2" />
+                    Отправить запрос
+                  </>
+                )}
               </Button>
             </form>
 
