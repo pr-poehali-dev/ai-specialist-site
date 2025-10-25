@@ -92,9 +92,12 @@ export function BlogSection() {
                   <Button 
                     variant="ghost" 
                     className="w-full justify-between group-hover:bg-primary/10 transition-colors"
+                    asChild
                   >
-                    Читать статью
-                    <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
+                    <a href={`/blog/${article.slug}`}>
+                      Читать статью
+                      <Icon name="ArrowRight" size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </div>
               </Card>
