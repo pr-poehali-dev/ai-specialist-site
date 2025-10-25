@@ -53,10 +53,6 @@ export function HeroSection({ trackWhatsAppClick }: HeroSectionProps) {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="CheckCircle2" size={18} className="text-primary" />
-              <span>Работа по договору</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Icon name="CheckCircle2" size={18} className="text-primary" />
               <span>Быстрая реализация</span>
             </div>
           </div>
