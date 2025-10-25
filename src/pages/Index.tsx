@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,10 @@ import Icon from '@/components/ui/icon';
 import { toast } from '@/hooks/use-toast';
 
 export default function Index() {
+  // SEO meta tags
+  useEffect(() => {
+    document.title = 'ai Kate - AI-специалист по автоматизации бизнеса | Владивосток и вся Россия';
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -217,9 +221,15 @@ export default function Index() {
         )}
       </header>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" itemScope itemType="https://schema.org/ProfessionalService">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-glow" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20" />
+        
+        <meta itemProp="name" content="ai Kate - AI-специалист по автоматизации бизнеса" />
+        <meta itemProp="description" content="Автоматизация бизнес-процессов с помощью ИИ, генерация AI-контента, разработка сайтов и Telegram-ботов" />
+        <meta itemProp="url" content="https://aikate.ru" />
+        <meta itemProp="telephone" content="+79146912960" />
+        <meta itemProp="email" content="katuhka@list.ru" />
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
