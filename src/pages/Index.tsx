@@ -133,21 +133,42 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Navigation Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/4fa9dcb0-ecf6-4bde-b563-a33203f0b413.jpeg" 
+                alt="ai Kate" 
+                className="w-10 h-10 object-cover rounded-full shadow-lg shadow-primary/30 border border-primary/20"
+              />
+              <span className="font-heading text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                ai Kate
+              </span>
+            </div>
+            
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
+              <a href="#cases" className="text-sm hover:text-primary transition-colors">Кейсы</a>
+              <a href="#about" className="text-sm hover:text-primary transition-colors">Обо мне</a>
+              <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
+            </nav>
+            
+            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary">
+              <a href="#contact">Заказать</a>
+            </Button>
+          </div>
+        </div>
+      </header>
+
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-glow" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20" />
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="mb-6 flex justify-center">
-              <img 
-                src="https://cdn.poehali.dev/files/4fa9dcb0-ecf6-4bde-b563-a33203f0b413.jpeg" 
-                alt="ai Kate Logo" 
-                className="w-16 h-16 object-cover rounded-full shadow-2xl shadow-primary/50 border-2 border-primary/30 animate-float hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight mt-20">
               Автоматизирую бизнес-процессы с помощью искусственного интеллекта
             </h1>
             
