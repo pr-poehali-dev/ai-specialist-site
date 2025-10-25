@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aikate.ru/sitemap.xml
+Sitemap: https://aikate.tech/sitemap.xml
 
 # Google
 User-agent: Googlebot
