@@ -11,7 +11,8 @@ const services = [
   {
     icon: "Camera",
     title: "AI-фото и нейрофотосессии",
-    description: "Профессиональная генерация изображений и фотосессии с использованием нейросетей"
+    description: "Профессиональная генерация изображений и фотосессии с использованием нейросетей",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/70171d15-ba00-4249-9e36-cf8d0878ceac.jpg"
   },
   {
     icon: "Globe",
@@ -66,11 +67,8 @@ export function ServicesSection() {
               <Card className={`p-6 hover:shadow-lg transition-all hover:scale-105 h-full relative overflow-hidden ${
                 index === 0 ? 'bg-cover bg-center' : 'bg-card'
               }`}
-              style={index === 0 ? {
-                backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
-              } : {}}
               >
-                {index === 0 && (
+                {service.backgroundImage && (
                   <>
                     <motion.div 
                       className="absolute inset-0"
@@ -85,7 +83,7 @@ export function ServicesSection() {
                         ease: "easeInOut"
                       }}
                       style={{
-                        backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
+                        backgroundImage: `url(${service.backgroundImage})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                       }}
@@ -93,7 +91,7 @@ export function ServicesSection() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
                   </>
                 )}
-                <div className={index === 0 ? 'relative z-10' : ''}>
+                <div className={service.backgroundImage ? 'relative z-10' : ''}>
                   <motion.div
                     animate={{
                       scale: [1, 1.2, 1],
@@ -110,18 +108,18 @@ export function ServicesSection() {
                     <Icon 
                       name={service.icon as any} 
                       size={40} 
-                      className={index === 0 ? 'text-white drop-shadow-lg' : 'text-primary'} 
+                      className={service.backgroundImage ? 'text-white drop-shadow-lg' : 'text-primary'} 
                     />
                   </motion.div>
                   <h3 
-                    className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-white' : ''}`}
-                    style={index === 0 ? { textShadow: '2px 2px 8px rgba(0,0,0,0.8)' } : {}}
+                    className={`font-heading text-xl font-bold mb-3 ${service.backgroundImage ? 'text-white' : ''}`}
+                    style={service.backgroundImage ? { textShadow: '2px 2px 8px rgba(0,0,0,0.8)' } : {}}
                   >
                     {service.title}
                   </h3>
                   <p 
-                    className={index === 0 ? 'text-white font-semibold' : 'text-muted-foreground'}
-                    style={index === 0 ? { textShadow: '1px 1px 6px rgba(0,0,0,0.7)' } : {}}
+                    className={service.backgroundImage ? 'text-white font-semibold' : 'text-muted-foreground'}
+                    style={service.backgroundImage ? { textShadow: '1px 1px 6px rgba(0,0,0,0.7)' } : {}}
                   >
                     {service.description}
                   </p>
