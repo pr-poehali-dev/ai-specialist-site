@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import { motion } from 'framer-motion';
 
 interface ContactSectionProps {
   formData: {
@@ -30,16 +31,28 @@ export function ContactSection({
   return (
     <section id="contact" className="py-20 px-4 bg-card/50">
       <div className="container mx-auto max-w-2xl">
-        <div className="text-center mb-12">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Свяжитесь со мной
           </h2>
           <p className="text-xl text-muted-foreground">
             Обсудим ваш проект и найдем лучшее решение
           </p>
-        </div>
+        </motion.div>
 
-        <Card className="p-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Card className="p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium mb-2">Имя</label>
@@ -133,7 +146,8 @@ export function ContactSection({
               </Button>
             </div>
           </div>
-        </Card>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );

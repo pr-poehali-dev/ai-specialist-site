@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card';
+import { motion } from 'framer-motion';
 
 const portfolio = [
   {
@@ -17,18 +18,31 @@ export function PortfolioSection() {
   return (
     <section id="cases" className="py-20 px-4 bg-card/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Портфолио
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Примеры реализованных проектов
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {portfolio.map((item, index) => (
-            <Card key={index} className="overflow-hidden group hover:shadow-2xl transition-all">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <Card className="overflow-hidden group hover:shadow-2xl transition-all h-full">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={item.image} 
@@ -40,7 +54,8 @@ export function PortfolioSection() {
                 <h3 className="font-heading text-2xl font-bold mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
               </div>
-            </Card>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

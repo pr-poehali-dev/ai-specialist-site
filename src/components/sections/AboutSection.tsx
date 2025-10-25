@@ -1,11 +1,18 @@
 import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { motion } from 'framer-motion';
 
 export function AboutSection() {
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
-        <Card className="p-8 md:p-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <Card className="p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               Обо мне
@@ -41,7 +48,8 @@ export function AboutSection() {
               </div>
             </div>
           </div>
-        </Card>
+          </Card>
+        </motion.div>
       </div>
     </section>
   );
