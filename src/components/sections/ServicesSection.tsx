@@ -67,7 +67,7 @@ export function ServicesSection() {
                 index === 0 ? 'bg-cover bg-center' : 'bg-card'
               }`}
               style={index === 0 ? {
-                backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/1ef0edea-33eb-42bf-984b-5a19ff750246.jpg)',
+                backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
               } : {}}
               >
                 {index === 0 && (
@@ -84,7 +84,7 @@ export function ServicesSection() {
                       ease: "easeInOut"
                     }}
                     style={{
-                      backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/1ef0edea-33eb-42bf-984b-5a19ff750246.jpg)',
+                      backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
