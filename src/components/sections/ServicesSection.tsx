@@ -6,7 +6,8 @@ const services = [
   {
     icon: "Video",
     title: "Генерация AI-видео",
-    description: "Работа с Veo 3 и другими агрегатами, создание видеоконтента с помощью ИИ"
+    description: "Работа с Veo 3 и другими агрегатами, создание видеоконтента с помощью ИИ",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/dae292a6-9ae6-4ecd-8666-30587b938eed.jpg"
   },
   {
     icon: "Camera",
@@ -17,22 +18,26 @@ const services = [
   {
     icon: "Globe",
     title: "Разработка сайтов",
-    description: "Создание сайтов и лендингов в кратчайшие сроки с современным дизайном"
+    description: "Создание сайтов и лендингов в кратчайшие сроки с современным дизайном",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/9b7eb82b-a304-4e7d-a665-e25bbb1082ca.jpg"
   },
   {
     icon: "MessageSquare",
     title: "Telegram-ассистенты",
-    description: "Разработка умных ботов для автоматизации коммуникации с клиентами"
+    description: "Разработка умных ботов для автоматизации коммуникации с клиентами",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/1e4f291e-c034-4153-986b-cd1435eb6331.jpg"
   },
   {
     icon: "Sparkles",
     title: "Prompt Engineering",
-    description: "Экспертиза в создании эффективных промптов для различных AI-платформ"
+    description: "Экспертиза в создании эффективных промптов для различных AI-платформ",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/af5c1a6e-ac5a-4136-8eb6-ef8d60659154.jpg"
   },
   {
     icon: "Palette",
     title: "Дизайн и брендинг",
-    description: "Разработка логотипов, визиток и фирменного стиля вашего бренда"
+    description: "Разработка логотипов, визиток и фирменного стиля вашего бренда",
+    backgroundImage: "https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/65cefc27-8525-4b0b-b620-366186b214d4.jpg"
   }
 ];
 
