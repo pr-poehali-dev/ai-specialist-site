@@ -72,7 +72,7 @@ export function ServicesSection() {
               >
                 {index === 0 && (
                   <motion.div 
-                    className="absolute inset-0 bg-black/60"
+                    className="absolute inset-0"
                     animate={{
                       scale: [1, 1.1, 1],
                       x: [0, -20, 0],
@@ -91,9 +91,9 @@ export function ServicesSection() {
                   />
                 )}
                 <div className={index === 0 ? 'relative z-10' : ''}>
-                  <Icon name={service.icon as any} size={40} className={`mb-4 ${index === 0 ? 'text-white' : 'text-primary'}`} />
-                  <h3 className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-white' : ''}`}>{service.title}</h3>
-                  <p className={index === 0 ? 'text-gray-200' : 'text-muted-foreground'}>{service.description}</p>
+                  <Icon name={service.icon as any} size={40} className={`mb-4 ${index === 0 ? 'text-black' : 'text-primary'}`} />
+                  <h3 className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-black' : ''}`}>{service.title}</h3>
+                  <p className={index === 0 ? 'text-black' : 'text-muted-foreground'}>{service.description}</p>
                 </div>
               </Card>
             </motion.div>
