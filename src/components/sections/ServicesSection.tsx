@@ -94,11 +94,32 @@ export function ServicesSection() {
                   </>
                 )}
                 <div className={index === 0 ? 'relative z-10' : ''}>
-                  <Icon 
-                    name={service.icon as any} 
-                    size={40} 
-                    className={`mb-4 ${index === 0 ? 'text-white drop-shadow-lg' : 'text-primary'}`} 
-                  />
+                  {index === 0 ? (
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [1, 0.8, 1]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="mb-4"
+                    >
+                      <Icon 
+                        name={service.icon as any} 
+                        size={40} 
+                        className="text-white drop-shadow-lg" 
+                      />
+                    </motion.div>
+                  ) : (
+                    <Icon 
+                      name={service.icon as any} 
+                      size={40} 
+                      className="text-primary mb-4" 
+                    />
+                  )}
                   <h3 
                     className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-white' : ''}`}
                     style={index === 0 ? { textShadow: '2px 2px 8px rgba(0,0,0,0.8)' } : {}}
