@@ -186,15 +186,6 @@ export default function Index() {
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Получить консультацию
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 border-2"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <Icon name="Rocket" size={20} className="mr-2" />
-                Узнать больше
-              </Button>
             </div>
 
             <div className="flex flex-wrap gap-6 justify-center text-sm text-muted-foreground">
