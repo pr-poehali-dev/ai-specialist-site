@@ -395,7 +395,7 @@ export default function Index() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="mailto:your@email.com">
+                  <a href="mailto:katuhka@list.ru">
                     <Icon name="Mail" size={20} className="mr-2" />
                     Email
                   </a>
