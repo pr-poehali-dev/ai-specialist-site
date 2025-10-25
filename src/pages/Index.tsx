@@ -35,6 +35,11 @@ export default function Index() {
       const data = await response.json();
       
       if (response.ok) {
+        // Yandex Metrika goal tracking
+        if (typeof window !== 'undefined' && (window as any).ym) {
+          (window as any).ym(101026698, 'reachGoal', 'form_submit');
+        }
+        
         toast({
           title: "Заявка отправлена!",
           description: "Свяжусь с вами в ближайшее время.",
@@ -134,6 +139,24 @@ export default function Index() {
 
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const trackWhatsAppClick = () => {
+    if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(101026698, 'reachGoal', 'whatsapp_click');
+    }
+  };
+
+  const trackTelegramClick = () => {
+    if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(101026698, 'reachGoal', 'telegram_click');
+    }
+  };
+
+  const trackEmailClick = () => {
+    if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(101026698, 'reachGoal', 'email_click');
+    }
   };
 
   return (
@@ -248,7 +271,12 @@ export default function Index() {
                 className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all w-full sm:w-auto"
                 asChild
               >
-                <a href="https://wa.me/79146912960" target="_blank" rel="noopener noreferrer">
+                <a 
+                  href="https://wa.me/79146912960" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={trackWhatsAppClick}
+                >
                   <Icon name="MessageCircle" size={20} className="mr-2" />
                   Получить консультацию
                 </a>
@@ -448,19 +476,32 @@ export default function Index() {
               <p className="text-center text-sm text-muted-foreground mb-4">Или свяжитесь удобным способом:</p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" size="lg" asChild>
-                  <a href="https://t.me/Plyachenko_Ekaterina" target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href="https://t.me/Plyachenko_Ekaterina" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={trackTelegramClick}
+                  >
                     <Icon name="Send" size={20} className="mr-2" />
                     Telegram
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="https://wa.me/79146912960" target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href="https://wa.me/79146912960" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={trackWhatsAppClick}
+                  >
                     <Icon name="MessageCircle" size={20} className="mr-2" />
                     WhatsApp
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="mailto:katuhka@list.ru">
+                  <a 
+                    href="mailto:katuhka@list.ru"
+                    onClick={trackEmailClick}
+                  >
                     <Icon name="Mail" size={20} className="mr-2" />
                     Email
                   </a>
