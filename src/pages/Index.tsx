@@ -383,7 +383,7 @@ export default function Index() {
               <p className="text-center text-sm text-muted-foreground mb-4">Или свяжитесь удобным способом:</p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button variant="outline" size="lg" asChild>
-                  <a href="https://t.me/your_telegram" target="_blank" rel="noopener noreferrer">
+                  <a href="https://t.me/Plyachenko_Ekaterina" target="_blank" rel="noopener noreferrer">
                     <Icon name="Send" size={20} className="mr-2" />
                     Telegram
                   </a>
