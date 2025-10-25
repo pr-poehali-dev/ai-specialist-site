@@ -8,6 +8,7 @@ import { PortfolioSection } from '@/components/sections/PortfolioSection';
 import { AboutSection } from '@/components/sections/AboutSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
+import { ScrollToTop } from '@/components/ui/scroll-to-top';
 
 export default function Index() {
   useEffect(() => {
@@ -111,6 +112,8 @@ export default function Index() {
       />
       
       <Footer />
+      
+      <ScrollToTop />
     </div>
   );
 }
