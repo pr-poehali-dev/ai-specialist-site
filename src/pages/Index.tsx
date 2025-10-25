@@ -139,12 +139,15 @@ export default function Index() {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="mb-8 flex justify-center">
-              <img 
-                src="https://cdn.poehali.dev/files/4fa9dcb0-ecf6-4bde-b563-a33203f0b413.jpeg" 
-                alt="ai Kate Logo" 
-                className="w-48 h-48 md:w-64 md:h-64 object-contain"
-              />
+            <div className="mb-12 flex justify-center">
+              <div className="relative logo-glow">
+                <img 
+                  src="https://cdn.poehali.dev/files/4fa9dcb0-ecf6-4bde-b563-a33203f0b413.jpeg" 
+                  alt="ai Kate Logo" 
+                  className="w-32 h-32 object-contain relative z-10 animate-float"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent blur-2xl opacity-50 animate-pulse"></div>
+              </div>
             </div>
             
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
