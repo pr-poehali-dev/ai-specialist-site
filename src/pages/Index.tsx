@@ -40,7 +40,7 @@ export default function Index() {
       
       if (response.ok) {
         if (typeof window !== 'undefined' && (window as any).ym) {
-          (window as any).ym(101026698, 'reachGoal', 'form_submit');
+          (window as any).ym(104843180, 'reachGoal', 'form_submit');
         }
         
         toast({
@@ -68,19 +68,19 @@ export default function Index() {
 
   const trackWhatsAppClick = () => {
     if (typeof window !== 'undefined' && (window as any).ym) {
-      (window as any).ym(101026698, 'reachGoal', 'whatsapp_click');
+      (window as any).ym(104843180, 'reachGoal', 'whatsapp_click');
     }
   };
 
   const trackTelegramClick = () => {
     if (typeof window !== 'undefined' && (window as any).ym) {
-      (window as any).ym(101026698, 'reachGoal', 'telegram_click');
+      (window as any).ym(104843180, 'reachGoal', 'telegram_click');
     }
   };
 
   const trackEmailClick = () => {
     if (typeof window !== 'undefined' && (window as any).ym) {
-      (window as any).ym(101026698, 'reachGoal', 'email_click');
+      (window as any).ym(104843180, 'reachGoal', 'email_click');
     }
   };
 
