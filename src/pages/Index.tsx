@@ -389,7 +389,7 @@ export default function Index() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href="https://wa.me/your_number" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/79146912960" target="_blank" rel="noopener noreferrer">
                     <Icon name="MessageCircle" size={20} className="mr-2" />
                     WhatsApp
                   </a>
