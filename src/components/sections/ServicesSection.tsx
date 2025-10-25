@@ -63,10 +63,38 @@ export function ServicesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="p-6 hover:shadow-lg transition-all hover:scale-105 bg-card h-full">
-              <Icon name={service.icon as any} size={40} className="text-primary mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <Card className={`p-6 hover:shadow-lg transition-all hover:scale-105 h-full relative overflow-hidden ${
+                index === 0 ? 'bg-cover bg-center' : 'bg-card'
+              }`}
+              style={index === 0 ? {
+                backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/1ef0edea-33eb-42bf-984b-5a19ff750246.jpg)',
+              } : {}}
+              >
+                {index === 0 && (
+                  <motion.div 
+                    className="absolute inset-0 bg-black/60"
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      x: [0, -20, 0],
+                      y: [0, -10, 0]
+                    }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    style={{
+                      backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/1ef0edea-33eb-42bf-984b-5a19ff750246.jpg)',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  />
+                )}
+                <div className={index === 0 ? 'relative z-10' : ''}>
+                  <Icon name={service.icon as any} size={40} className={`mb-4 ${index === 0 ? 'text-white' : 'text-primary'}`} />
+                  <h3 className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-white' : ''}`}>{service.title}</h3>
+                  <p className={index === 0 ? 'text-gray-200' : 'text-muted-foreground'}>{service.description}</p>
+                </div>
               </Card>
             </motion.div>
           ))}
