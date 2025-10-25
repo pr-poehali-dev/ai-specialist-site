@@ -181,10 +181,12 @@ export default function Index() {
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all"
-                onClick={scrollToContact}
+                asChild
               >
-                <Icon name="MessageCircle" size={20} className="mr-2" />
-                Получить консультацию
+                <a href="https://wa.me/79146912960" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageCircle" size={20} className="mr-2" />
+                  Получить консультацию
+                </a>
               </Button>
             </div>
 
