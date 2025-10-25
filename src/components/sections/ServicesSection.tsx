@@ -71,29 +71,46 @@ export function ServicesSection() {
               } : {}}
               >
                 {index === 0 && (
-                  <motion.div 
-                    className="absolute inset-0"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      x: [0, -20, 0],
-                      y: [0, -10, 0]
-                    }}
-                    transition={{
-                      duration: 20,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                    style={{
-                      backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  />
+                  <>
+                    <motion.div 
+                      className="absolute inset-0"
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        x: [0, -20, 0],
+                        y: [0, -10, 0]
+                      }}
+                      transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      style={{
+                        backgroundImage: 'url(https://cdn.poehali.dev/projects/bc4a1bf8-fcd7-491b-bba8-1c6bc3e6ecf0/files/972cffd8-84dd-4fb0-93eb-2b16e66d3a3f.jpg)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+                  </>
                 )}
                 <div className={index === 0 ? 'relative z-10' : ''}>
-                  <Icon name={service.icon as any} size={40} className={`mb-4 ${index === 0 ? 'text-black' : 'text-primary'}`} />
-                  <h3 className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-black' : ''}`}>{service.title}</h3>
-                  <p className={index === 0 ? 'text-black' : 'text-muted-foreground'}>{service.description}</p>
+                  <Icon 
+                    name={service.icon as any} 
+                    size={40} 
+                    className={`mb-4 ${index === 0 ? 'text-white drop-shadow-lg' : 'text-primary'}`} 
+                  />
+                  <h3 
+                    className={`font-heading text-xl font-bold mb-3 ${index === 0 ? 'text-white' : ''}`}
+                    style={index === 0 ? { textShadow: '2px 2px 8px rgba(0,0,0,0.8)' } : {}}
+                  >
+                    {service.title}
+                  </h3>
+                  <p 
+                    className={index === 0 ? 'text-white font-semibold' : 'text-muted-foreground'}
+                    style={index === 0 ? { textShadow: '1px 1px 6px rgba(0,0,0,0.7)' } : {}}
+                  >
+                    {service.description}
+                  </p>
                 </div>
               </Card>
             </motion.div>
