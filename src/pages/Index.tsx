@@ -143,7 +143,7 @@ export default function Index() {
               <img 
                 src="https://cdn.poehali.dev/files/4fa9dcb0-ecf6-4bde-b563-a33203f0b413.jpeg" 
                 alt="ai Kate Logo" 
-                className="w-16 h-16 object-cover rounded-full shadow-2xl shadow-primary/50 border-2 border-primary/30"
+                className="w-16 h-16 object-cover rounded-full shadow-2xl shadow-primary/50 border-2 border-primary/30 animate-float hover:scale-110 transition-transform duration-300"
               />
             </div>
             
