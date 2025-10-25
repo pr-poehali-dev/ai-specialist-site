@@ -25,6 +25,7 @@ export function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
             <a href="#cases" className="text-sm hover:text-primary transition-colors">Кейсы</a>
+            <a href="#blog" className="text-sm hover:text-primary transition-colors">Блог</a>
             <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
           </nav>
           
@@ -61,6 +62,13 @@ export function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
               onClick={() => setMobileMenuOpen(false)}
             >
               Кейсы
+            </a>
+            <a 
+              href="#blog" 
+              className="text-base hover:text-primary transition-colors py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Блог
             </a>
             <a 
               href="#contact" 

@@ -5,7 +5,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { ProcessSection } from '@/components/sections/ProcessSection';
 import { PortfolioSection } from '@/components/sections/PortfolioSection';
-
+import { BlogSection } from '@/components/sections/BlogSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
@@ -98,6 +98,8 @@ export default function Index() {
       <ProcessSection />
       
       <PortfolioSection />
+      
+      <BlogSection />
       
       <ContactSection 
         formData={formData}
