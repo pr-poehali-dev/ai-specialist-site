@@ -7,6 +7,7 @@ import Icon from '@/components/ui/icon';
 import { toast } from '@/hooks/use-toast';
 
 export default function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -155,11 +156,65 @@ export default function Index() {
               <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
             </nav>
             
-            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary">
-              <a href="#contact">Заказать</a>
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button size="sm" className="hidden md:flex bg-gradient-to-r from-primary to-secondary">
+                <a href="#contact">Заказать</a>
+              </Button>
+              
+              <Button 
+                size="sm" 
+                variant="ghost" 
+                className="md:hidden"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+              </Button>
+            </div>
           </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+            <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              <a 
+                href="#services" 
+                className="text-base hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Услуги
+              </a>
+              <a 
+                href="#cases" 
+                className="text-base hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Кейсы
+              </a>
+              <a 
+                href="#about" 
+                className="text-base hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Обо мне
+              </a>
+              <a 
+                href="#contact" 
+                className="text-base hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Контакты
+              </a>
+              <Button 
+                size="sm" 
+                className="bg-gradient-to-r from-primary to-secondary w-full"
+                asChild
+              >
+                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Заказать</a>
+              </Button>
+            </nav>
+          </div>
+        )}
       </header>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -168,19 +223,19 @@ export default function Index() {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight mt-20">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight mt-20 px-2">
               Автоматизирую бизнес-процессы с помощью искусственного интеллекта
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 md:mb-8 max-w-3xl mx-auto px-4">
               Генерация AI-контента, разработка сайтов и Telegram-ботов, экспертиза в prompt engineering. 
               Превращаю идеи в работающие решения.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 md:mb-12 px-4">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all"
+                className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all w-full sm:w-auto"
                 asChild
               >
                 <a href="https://wa.me/79146912960" target="_blank" rel="noopener noreferrer">
