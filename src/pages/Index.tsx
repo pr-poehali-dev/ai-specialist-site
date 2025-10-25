@@ -139,10 +139,7 @@ export default function Index() {
         
         <div className="container mx-auto px-4 z-10">
           <div className="max-w-5xl mx-auto text-center animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-8">
-              <Icon name="Sparkles" size={20} className="text-primary" />
-              <span className="text-sm font-medium">AI-специалист во Владивостоке и по всей России</span>
-            </div>
+
             
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent leading-tight">
               Автоматизирую бизнес-процессы с помощью искусственного интеллекта
