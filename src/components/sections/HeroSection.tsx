@@ -13,7 +13,7 @@ export function HeroSection({ trackWhatsAppClick }: HeroSectionProps) {
       
       <meta itemProp="name" content="ai Kate - AI-специалист по автоматизации бизнеса" />
       <meta itemProp="description" content="Автоматизация бизнес-процессов с помощью ИИ, генерация AI-контента, разработка сайтов и Telegram-ботов" />
-      <meta itemProp="url" content="https://aikate.ru" />
+      <meta itemProp="url" content="https://aikate.tech" />
       <meta itemProp="telephone" content="+79146912960" />
       <meta itemProp="email" content="katuhka@list.ru" />
       
