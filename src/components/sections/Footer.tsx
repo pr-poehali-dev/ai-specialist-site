@@ -41,6 +41,11 @@ export function Footer() {
         <div className="text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} ai Kate. Все права защищены.</p>
           <p className="mt-2">Владивосток, Россия</p>
+          <p className="mt-2">
+            <a href="/privacy" className="hover:text-primary transition-colors underline">
+              Политика конфиденциальности
+            </a>
+          </p>
         </div>
       </div>
     </footer>

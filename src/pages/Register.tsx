@@ -147,6 +147,14 @@ const Register = () => {
                   />
                 </div>
 
+                <div className="text-xs text-gray-500 bg-gray-50 p-3 rounded-md">
+                  Нажимая кнопку "Отправить заявку", вы соглашаетесь с{' '}
+                  <a href="/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                    политикой конфиденциальности
+                  </a>
+                  {' '}и даёте согласие на обработку персональных данных
+                </div>
+
                 <Button
                   type="submit"
                   className="w-full"
