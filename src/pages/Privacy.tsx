@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import { CookieConsent } from '@/components/ui/cookie-consent';
 
 const Privacy = () => {
   useEffect(() => {
@@ -148,6 +149,8 @@ const Privacy = () => {
           </div>
         </div>
       </div>
+      
+      <CookieConsent />
     </div>
   );
 };

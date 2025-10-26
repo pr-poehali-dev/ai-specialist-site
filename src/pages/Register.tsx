@@ -6,6 +6,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import Icon from '@/components/ui/icon';
+import { CookieConsent } from '@/components/ui/cookie-consent';
 
 const Register = () => {
   const { toast } = useToast();
@@ -184,6 +185,8 @@ const Register = () => {
           </div>
         </div>
       </div>
+      
+      <CookieConsent />
     </div>
   );
 };

@@ -9,6 +9,7 @@ import { BlogSection } from '@/components/sections/BlogSection';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/sections/Footer';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
+import { CookieConsent } from '@/components/ui/cookie-consent';
 
 export default function Index() {
   useEffect(() => {
@@ -114,6 +115,8 @@ export default function Index() {
       <Footer />
       
       <ScrollToTop />
+      
+      <CookieConsent />
     </div>
   );
 }
