@@ -23,15 +23,16 @@ export function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
-            <a href="#cases" className="text-sm hover:text-primary transition-colors">Кейсы</a>
-            <a href="#blog" className="text-sm hover:text-primary transition-colors">Блог</a>
-            <a href="#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
+            <a href="/#services" className="text-sm hover:text-primary transition-colors">Услуги</a>
+            <a href="/#cases" className="text-sm hover:text-primary transition-colors">Кейсы</a>
+            <a href="/#blog" className="text-sm hover:text-primary transition-colors">Блог</a>
+            <a href="/#contact" className="text-sm hover:text-primary transition-colors">Контакты</a>
+            <a href="/register" className="text-sm hover:text-primary transition-colors font-semibold">Регистрация</a>
           </nav>
           
           <div className="flex items-center gap-2">
             <Button size="sm" className="hidden md:flex bg-gradient-to-r from-primary to-secondary">
-              <a href="#contact">Заказать</a>
+              <a href="/#contact">Заказать</a>
             </Button>
             
             <Button 
@@ -50,39 +51,46 @@ export function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <a 
-              href="#services" 
+              href="/#services" 
               className="text-base hover:text-primary transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Услуги
             </a>
             <a 
-              href="#cases" 
+              href="/#cases" 
               className="text-base hover:text-primary transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Кейсы
             </a>
             <a 
-              href="#blog" 
+              href="/#blog" 
               className="text-base hover:text-primary transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Блог
             </a>
             <a 
-              href="#contact" 
+              href="/#contact" 
               className="text-base hover:text-primary transition-colors py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Контакты
+            </a>
+            <a 
+              href="/register" 
+              className="text-base hover:text-primary transition-colors py-2 font-semibold"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Регистрация
             </a>
             <Button 
               size="sm" 
               className="bg-gradient-to-r from-primary to-secondary w-full"
               asChild
             >
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Заказать</a>
+              <a href="/#contact" onClick={() => setMobileMenuOpen(false)}>Заказать</a>
             </Button>
           </nav>
         </div>
